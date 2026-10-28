@@ -179,10 +179,19 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+/* 技能/學經歷間距：調整 margin-bottom 即可改變每一項之間的距離 */
+.skills li {
+    margin-bottom: 12px;
+}
+.skills p {
+    margin: 0;
+    line-height: 1.5;
+}
 .skills h3 {
     font-family: var(--font-pixel);
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--skill-title);
     background: linear-gradient(90deg, var(--skill-title) 50%, var(--h4) 100%);
     -webkit-background-clip: text;
@@ -290,16 +299,30 @@ ul {
         0 0 18px var(--h2-shadow);
 }
 .icon.github {
-    mask-image: url("icon/github_icon.svg");
-    -webkit-mask-image: url("icon/github_icon.svg");
+    mask-image: url("docs/github_icon.svg");
+    -webkit-mask-image: url("docs/github_icon.svg");
     
 }
 .icon.mobile {
-    mask-image: url("icon/mobile_icon.svg");
-    -webkit-mask-image: url("icon/mobile_icon.svg");
+    mask-image: url("docs/mobile_icon.svg");
+    -webkit-mask-image: url("docs/mobile_icon.svg");
 }
 .icon.envelope {
-    mask-image: url("icon/envelope_icon.svg");
-    -webkit-mask-image: url("icon/envelope_icon.svg");
+    mask-image: url("docs/envelope_icon.svg");
+    -webkit-mask-image: url("docs/envelope_icon.svg");
 }
 
+
+.cert-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 16px;
+    font-family: var(--font-pixel);
+    color: var(--h2);
+    background: var(--h3bg);
+    border-bottom: 3px solid var(--h3bg-bottom);
+    text-decoration: none;
+}
+.cert-btn:hover {
+    background: var(--h3bg-hover);
+}

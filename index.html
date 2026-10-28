@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="履歷.css">
+    <title>林靖淩 Jenny Lin | 履歷</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="background"></canvas>
@@ -23,16 +23,10 @@
             <ul class="skills">
                 <li>
                     <summary>
-                        <h3>ELK/ Splunk</h3>
-                        <p>log分析 監控視覺化</p>
-                    </summary>
-                    </li>
-                <li>
-                    <summary>
                         <h3>Python</h3>
                         <p>FastAPI 後端服務</p>
                     </summary>
-                </li>
+                    </li>
                 <li>
                     <summary>
                         <h3>Git/Github</h3>
@@ -49,6 +43,12 @@
                     <summary>
                         <h3>Docker</h3>
                         <p>容器化部署、CI/CD</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>ELK/ Splunk</h3>
+                        <p>log分析 監控視覺化</p>
                     </summary>
                 </li>
                 <li>
@@ -110,7 +110,7 @@
                 <div class="icon-box">
                 <div class="icon envelope">
                 </div></div>
-                <p><a href="mailto:a2357756@email.com">a2357756@email.com</a></p>
+                <p><a href="mailto:a2357756@gmail.com">a2357756@gmail.com</a></p>
                 </div>
 
                 <div class="icon-content">
@@ -124,7 +124,7 @@
             </div>
     </div>
     <div class="right">
-    <h2>作品展示</h2>
+    <h2>專案介紹</h2>
 
     <ul class="project-list">
         <li>
@@ -147,9 +147,9 @@
                     </ul>
                     <p>技術： Python・PostgreSQL・WebSocket・HTML/JavaScript</p>
 
-                    <h4>功能演示</h4>
+                    <!-- <h4>功能演示</h4> -->
                     <div class="demo">
-                        <p>之後放入演示畫面</p>
+                        <!-- <p>之後放入演示畫面</p> -->
                     </div>
                 </div>
             </details>
@@ -176,9 +176,9 @@
                     </ul>
                     <p>技術： Python・FastAPI・JWT・bcrypt・Linux</p>
 
-                    <h4>功能演示</h4>
+                    <!-- <h4>功能演示</h4> -->
                     <div class="demo">
-                        <p>之後放入演示畫面</p>
+                        <!-- <p>之後放入演示畫面</p> -->
                     </div>
                 </div>
             </details>
@@ -202,9 +202,9 @@
                     </ul>
                     <p>技術：Python・FastAPI・PostgreSQL・MQTT・WebSocket・Telegram Bot</p>
 
-                    <h4>功能演示</h4>
+                    <!-- <h4>功能演示</h4> -->
                     <div class="demo">
-                        <p>之後放入演示畫面</p>
+                        <!-- <p>之後放入演示畫面</p> -->
                     </div>
                 </div>
             </details>
@@ -231,9 +231,9 @@
                     </ul>
                     <p>技術： Python・SQLite・SHA256（hashlib）・customtkinter・PyInstaller・Inno Setup・Discord Webhook</p>
 
-                    <h4>功能演示</h4>
+                    <!-- <h4>功能演示</h4> -->
                     <div class="demo">
-                        <p>之後放入演示畫面</p>
+                        <!-- <p>之後放入演示畫面</p> -->
                     </div>
                 </div>
             </details>
@@ -242,16 +242,26 @@
         <li>
             <details class="project" name="project">
                 <summary>
-                    <h3>SiteNap - 螢幕遮罩工具 (個人)</h3>
+                    <h3>SiteNap — 強制休息遮罩 Chrome 擴充功能</h3>
                 </summary>
 
                 <div class="project-detail">
                     <h4>作品介紹</h4>
-                    <p>Chrome 擴充功能，可快速遮罩網頁內容，用於強制休息或專注防干擾情境。</p>
+                    <p>角色：獨立開發 / 功能實作・跨分頁狀態同步・遮罩與動畫互動</p>
+                    <p>啟動後在目前分頁疊加全螢幕遮罩與動畫，阻擋底下網頁的點擊與滾動，用於強制休息或防止被旁人偷看的 Chrome 擴充功能（Manifest V3）。</p>
+                    <p>支援倒數自動關閉（5–100 分鐘）、鎖定機制與三種可即時切換的視覺模式，並可選擇只遮罩單一分頁。以原生 JavaScript 實作，無框架與建置流程，原始碼公開於 GitHub，已於 Chrome、Edge 測試。</p>
+                    <h4>實作內容：</h4>
+                    <ul>
+                        <li><span class="item-title">跨分頁狀態同步</span><span>以 chrome.storage.local 搭配 storage.onChanged，讓開關、視覺模式與鎖定狀態在所有分頁即時一致；排查並修復 storage key 命名不一致、快速開關造成的非同步時序競態</span></li>
+                        <li><span class="item-title">「僅此分頁」模式</span><span>每個分頁使用獨立的 storage key，由 background service worker 回報分頁 ID，讓遮罩在重新整理（F5）後仍保留；分頁關閉與瀏覽器啟動時自動清理殘留資料</span></li>
+                        <li><span class="item-title">鎖定機制</span><span>在 content script 統一把關，popup 按鈕與 Esc 鍵皆受限，倒數中不可解鎖、但可中途加鎖；倒數到時的自動關閉走獨立路徑，避免鎖定造成死鎖</span></li>
+                        <li><span class="item-title">遮罩與動畫</span><span>全螢幕遮罩同時攔截點擊與滾輪事件；三種視覺模式（CSS 漸層轉圈、SVG 動畫貓咪、內嵌 SVG 睡覺雲）切換時先淡出再淡入</span></li>
+                    </ul>
+                    <p>技術： JavaScript・Chrome Extension（Manifest V3）・chrome.storage・HTML/CSS</p>
 
-                    <h4>功能演示</h4>
+                    <!-- <h4>功能演示</h4> -->
                     <div class="demo">
-                        <p>之後放入演示畫面</p>
+                        <!-- <p>之後放入演示畫面</p> -->
                     </div>
                 </div>
             </details>
@@ -263,12 +273,11 @@
         <li>
             <h3>Fortinet Network Security</h3>
             <p>Deploying Security Strategies for Modern Network（2026/07/03）</p>
+            <a class="cert-btn" href="docs/fortinet-certificate.pdf" target="_blank" rel="noopener">查看證書</a>
         </li>
     </ul>
 </div>
 </div>
-<script src="履歷.js"></script>
+<script src="script.js"></script>
 </body>
-</html>
-
 </html>
