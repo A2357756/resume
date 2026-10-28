@@ -1,0 +1,305 @@
+/* 字體（Google Fonts ＋ Pixelify Sans 英文像素體 ＋ Fusion Pixel / Cubic 11 繁中全字集像素體） */
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+TC:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&display=swap");
+@import url("https://fonts.bunny.net/css?family=pixelify-sans:500");
+@import url("https://cdn.jsdelivr.net/npm/@vp-tw/cjk-web-fonts-fusion-pixel-font@0.0.1/dist/12px/proportional/zh_hant/Fusion-Pixel-12px-Proportional-Traditional-Chinese.css");
+
+
+/* 顏色與字體變數（預設：深色模式） */
+:root {
+    --font-pixel: "Pixelify Sans",  "Fusion Pixel 12px Proportional Traditional Chinese", "DotGothic16", "Noto Sans TC", monospace;
+    --font-body: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+
+    --h1-top: rgba(2, 2, 33, 0);
+    --h1-mid: rgba(141, 135, 188, 0.5);
+    --h1-bottom: rgb(249, 235, 218);
+
+    --h2: rgb(216, 239, 255);
+    --h2bg: rgb(28, 41, 87);
+    --h2-shadow: rgba(107, 154, 203, 0.45);
+    --h2-glow: rgba(223, 249, 255, 0.15);
+
+    --h3bg: rgb(24, 43, 111);
+    --h3bg-bottom: #ffc35480;
+    --h3bg-hover: rgb(14, 29, 81);
+    --h3bg-hover-bottom: rgb(215, 150, 40);
+    --skill-title: rgb(237, 247, 254);
+    --btn-shadow: rgba(0, 0, 0, 0.3);
+    --btn-hover-glow: rgba(223, 249, 255, 0.4);
+
+    --h4: rgb(151, 200, 223);
+
+    --bg1: rgb(3, 24, 32);
+    --bg-mid1: rgb(14, 40, 62);
+    --bg-mid2: rgb(52, 76, 114);
+    --bg2: rgb(189, 184, 149);
+
+    --content: rgba(255, 255, 255, 0.85);
+    --line-color: rgba(205, 236, 250, 0.6);
+    --icon1: rgb(175, 207, 223);
+    --icon2: rgb(107, 154, 203);
+    --icon3: rgb(223, 249, 255);
+    --dot-color: rgba(205, 236, 250, 0.4);
+}
+
+/* 淺色模式 */
+@media (prefers-color-scheme: light) {
+    :root {
+        --h1-top: rgba(28, 55, 115, 0.1);
+        --h1-mid: rgba(45, 80, 145, 0.65);
+        --h1-bottom: rgb(20, 45, 95);
+
+        --h2: rgb(8, 13, 79);
+        --h2bg: rgb(131, 169, 246);
+        --h2-shadow: rgba(42, 72, 135, 0.3);
+        --h2-glow: rgba(39, 70, 106, 0.25);
+
+        --h3bg: rgb(169, 196, 250);
+        --h3bg-hover: rgb(106, 154, 244);
+        --h3bg-bottom: rgb(241, 206, 155);
+        --h3bg-hover: rgb(97, 141, 230);
+        --h3bg-hover-bottom: rgb(239, 195, 124);
+        --skill-title: rgb(28, 55, 115);
+        --btn-shadow: rgba(28, 55, 115, 0.2);
+        --btn-hover-glow: rgba(72, 115, 195, 0.4);
+
+        --h4: rgb(35, 75, 135);
+
+        --bg1: rgb(195, 220, 242);
+        --bg-mid1: rgb(220, 236, 250);
+        --bg-mid2: rgb(238, 246, 253);
+        --bg2: rgb(250, 253, 255);
+        --bg2: rgb(248, 243, 228);
+
+        --content: rgb(24, 48, 82);
+        --line-color: rgba(42, 72, 135, 0.45);
+        --icon1: rgb(72, 115, 195);
+        --icon2: rgb(35, 65, 125);
+        --icon3: rgb(120, 185, 245);
+        --dot-color: rgba(42, 72, 135, 0.25);
+    }
+}
+
+/* 背景 */
+body {
+    background: linear-gradient(
+      to bottom, var(--bg1) 0%, var(--bg-mid1) 45%, var(--bg-mid2) 75%, var(--bg2) 100%
+    );
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+    pointer-events: none;
+}
+/* 標題 */
+h1 {
+    text-align: center;
+    font-family: var(--font-pixel);
+    font-size: 80px;
+    background: linear-gradient(
+        to bottom,
+        var(--h1-top) 0%,
+        var(--h1-mid) 50%,
+        var(--h1-bottom) 100%
+    );
+    /* 把背景限制在文字範圍 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* 讓原本的文字顏色透明 */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+h2 {
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: var(--h2);
+    background: linear-gradient(90deg, var(--h3bg) 0%, var(--h2bg) 100%);
+    display: inline-block;
+    padding: 8px 24px;
+    margin-bottom: 12px;
+    font-family: var(--font-pixel);
+    border: 1px solid var(--line-color);
+    box-shadow:
+        4px 4px 0px var(--h2-shadow),
+        0 0 12px var(--h2-glow);
+}
+h4 {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    color: var(--h4);
+    margin-bottom: 8px;
+}
+.header-intro {
+    text-align: center;
+    font-family: var(--font-body);
+    color: var(--content);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* 分隔線 */
+hr {
+    border: none;
+    border-top: 5px dashed var(--line-color);
+}
+/* 內文 */
+.content {
+    font-family: var(--font-body);
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 100px;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--content);
+    font-weight: 700;
+    font-size: 16px;
+}
+.left {
+    border-right: 5px dashed var(--line-color);
+    padding-right: 30px;
+}
+.content p {
+    line-height: 1.8;
+    text-indent: 2em;
+    margin-bottom: 1em;
+}
+.icon-content a {
+    color: inherit;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.skills h3 {
+    font-family: var(--font-pixel);
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--skill-title);
+    background: linear-gradient(90deg, var(--skill-title) 50%, var(--h4) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+.project {
+    margin-bottom: 16px;
+    scroll-margin-top: 16px;
+}
+.project summary {
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--h3bg);
+    background: linear-gradient(135deg, var(--h3bg) 0%, var(--h3bg) 65%, var(--h3bg-bottom) 100%);
+    color: var(--h2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--line-color);
+    box-shadow: 0 4px 10px var(--btn-shadow);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.project summary:hover {
+    background-color: var(--h3bg-hover);
+    background: linear-gradient(135deg, var(--h3bg-hover) 0%, var(--h3bg-hover) 65%, var(--h3bg-hover-bottom) 100%);
+    box-shadow: 0 0 12px var(--btn-hover-glow);
+    transform: translateY(-2px);
+}
+.project summary:active {
+    transform: translateY(0);
+}
+.project[open] summary {
+    border-color: var(--icon3);
+    margin-bottom: 12px;
+}
+.project summary h3 {
+    display: inline-block;
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: 20px;
+}
+.project-detail ul {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+.project-detail li {
+    display: grid;
+    grid-template-columns: 7.5em 1fr;
+    column-gap: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 0.6em;
+}
+.project-detail .item-title {
+    position: relative;
+    text-align: justify;
+    text-align-last: justify;
+}
+.project-detail .item-title::after {
+    content: "：";
+    position: absolute;
+    right: -1.2em;
+    top: 0;
+}
+/* 圖標 */
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.icon-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-pixel);
+}
+.icon-content p {
+    margin: 0;
+    text-indent: 0;
+}
+/* 遮罩 */
+.icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(to bottom, var(--icon3) 0%, var(--icon1) 50%, var(--icon2) 100%);
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
+/* 發光效果 */
+.icon-box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--h2bg);
+    box-shadow:
+        0 0 8px var(--icon3),
+        0 0 18px var(--h2-shadow);
+}
+.icon.github {
+    mask-image: url("icon/github_icon.svg");
+    -webkit-mask-image: url("icon/github_icon.svg");
+    
+}
+.icon.mobile {
+    mask-image: url("icon/mobile_icon.svg");
+    -webkit-mask-image: url("icon/mobile_icon.svg");
+}
+.icon.envelope {
+    mask-image: url("icon/envelope_icon.svg");
+    -webkit-mask-image: url("icon/envelope_icon.svg");
+}
+

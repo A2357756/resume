@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="履歷.css">
+</head>
+<body>
+    <canvas id="background"></canvas>
+    <h1>林靖淩
+        Jenny Lin
+    </h1>
+    <div class="header-intro">
+        <p>注重於資安工程與Python後端開發，具備FastAPI與API邏輯設計經驗。</p>
+        <p>擅長拆解問題結構，進行事件分析與補齊系統功能缺口。</p>
+    </div>
+    <hr>
+    <div class="content">
+        <div class="left">
+        <h2>技術能力</h2><br>
+        <div class="left-content">
+            <ul class="skills">
+                <li>
+                    <summary>
+                        <h3>ELK/ Splunk</h3>
+                        <p>log分析 監控視覺化</p>
+                    </summary>
+                    </li>
+                <li>
+                    <summary>
+                        <h3>Python</h3>
+                        <p>FastAPI 後端服務</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>Git/Github</h3>
+                        <p>版本控制、協作開發</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>Linux Ubuntu</h3>
+                        <p>系統管理、服務建置</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>Docker</h3>
+                        <p>容器化部署、CI/CD</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>Grafana</h3>
+                        <p>資料視覺化、儀表板設計</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>Html/JavaScript</h3>
+                        <p>前端開發、互動功能實現</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>GCP</h3>
+                        <p>雲端平台、服務部署</p>
+                    </summary>
+                </li>
+            </ul>
+       
+        </div>
+
+        <h2>學經歷</h2><br>
+        <div class="left-content">
+            <ul class="skills">
+                <li>
+                    <summary>
+                        <h3>雲端資安工程師養成班</h3>
+                        <p>2026/04-2026/09｜進修</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>南台科技大學</h3>
+                        <p>2018/09-2025/12｜視覺傳達設計</p>
+                    </summary>
+                </li>
+                <li>
+                    <summary>
+                        <h3>台安藥局</h3>
+                        <p>2022/10-2025/07｜門市櫃台人員</p>
+                    </summary>
+                </li>
+            </ul>
+        </div>
+
+            <div class="icons">
+
+                <div class="icon-content">
+                 <div class="icon-box">
+                 <div class="icon mobile">
+                 </div></div>
+                 <p>0970750221</p>
+                 </div>
+
+                <div class="icon-content">
+                <div class="icon-box">
+                <div class="icon envelope">
+                </div></div>
+                <p><a href="mailto:a2357756@email.com">a2357756@email.com</a></p>
+                </div>
+
+                <div class="icon-content">
+                <div class="icon-box">
+                <div class="icon github">
+                </div>
+                </div>
+                <p><a href="https://github.com/a2357756" target="_blank">github.com/a2357756</a></p>
+                </div>
+
+            </div>
+    </div>
+    <div class="right">
+    <h2>作品展示</h2>
+
+    <ul class="project-list">
+        <li>
+            <details class="project" name="project">
+                <summary>
+                    <h3>Metis — 資安攻防演練平台</h3>
+                </summary>
+
+                <div class="project-detail">
+                    <h4>作品介紹</h4>
+                    <p>角色：紫隊組長 / 偵測規則設計・攻防事件關聯・前端戰況看板</p>
+                    <p>為中小企業紅藍隊資安演練設計的即時分析平台，供演練現場投影使用。</p>
+                    <p>平台同時收集紅隊攻擊指令與藍隊修補紀錄，透過 Python 自行開發的事件關聯邏輯，追蹤每個攻擊手法在演練過程中的狀態——攻擊是否成功突破、對應的防守漏洞是否在演練結束前被修補封堵。涵蓋外網與內網兩個環境架構、13 種攻擊技術分類（對應 MITRE ATT&amp;CK 框架），前端戰況看板以原生 JavaScript 實作，透過 WebSocket 即時推送攻防狀態供現場投影。</p>
+                    <h4>以紫隊組長身份負責：</h4>
+                    <ul>
+                        <li><span class="item-title">事件關聯邏輯</span><span>開發將紅隊攻擊紀錄與藍隊修補事件自動配對的核心判斷邏輯</span></li>
+                        <li><span class="item-title">偵測規則設計</span><span>定義各攻擊手法的識別條件與分類規則（對應 MITRE ATT&amp;CK 框架）</span></li>
+                        <li><span class="item-title">前端戰況看板</span><span>實作 1920×1080 固定畫布、等比縮放的投影介面，呈現攻擊技術分類與各手法當前攻防狀態</span></li>
+                        <li><span class="item-title">部署驗證</span><span>於真實演練 VM 環境進行部署、除錯與資料正確性把關</span></li>
+                    </ul>
+                    <p>技術： Python・PostgreSQL・WebSocket・HTML/JavaScript</p>
+
+                    <h4>功能演示</h4>
+                    <div class="demo">
+                        <p>之後放入演示畫面</p>
+                    </div>
+                </div>
+            </details>
+        </li>
+
+        <li>
+            <details class="project" name="project">
+                <summary>
+                    <h3>虛擬健身教練 — Xsens 動作偵測與評分系統</h3>
+                </summary>
+
+                <div class="project-detail">
+                    <h4>作品介紹</h4>
+                    <p>角色：後端工程師 / Rep 判斷狀態機・評分邏輯・認證與資安防護</p>
+                    <p>結合 Xsens 慣性感測器的健身動作偵測系統，即時分析使用者的運動姿勢，並計算完成次數與動作評分。系統分為健身房現場（即時視覺回饋）與家用網頁（歷史紀錄查詢）兩種使用情境，後端服務負責訓練資料的驗證、評分與儲存。</p>
+                    <p>後端採用「不信任客戶端」的設計：感測端只負責回報原始角度資料，動作是否有效、完成幾下、分數多少，一律由後端重新驗證與計算，避免分數被偽造。</p>
+                    <h4>負責後端 FastAPI 服務開發：</h4>
+                    <ul>
+                        <li><span class="item-title">Rep 判斷狀態機</span><span>以「站立→下降→最低點→上升→完成」五階段判斷一次完整動作，並設計防呆機制，單純晃動或沒蹲到底的動作不會被誤算為一次</span></li>
+                        <li><span class="item-title">評分邏輯設計</span><span>與 PM 討論評分規則，區分即時視覺回饋、里程碑與整組評分三個層次，各自採用適合的判斷方式</span></li>
+                        <li><span class="item-title">認證與權限</span><span>實作 JWT 雙軌身分驗證（使用者／裝置）、Email 驗證碼註冊與密碼重設流程，並以 IDOR 防護確保使用者只能存取自己的資料</span></li>
+                        <li><span class="item-title">資安防護</span><span>登入 Rate Limiting、請求大小限制，以及串接外部服務（寄信、圖片簽署）時的容錯處理，確保外部服務異常不會拖垮核心 API</span></li>
+                        <li><span class="item-title">部署驗證</span><span>於 Linux VM 環境部署、排查環境差異問題並完成端到端測試</span></li>
+                    </ul>
+                    <p>技術： Python・FastAPI・JWT・bcrypt・Linux</p>
+
+                    <h4>功能演示</h4>
+                    <div class="demo">
+                        <p>之後放入演示畫面</p>
+                    </div>
+                </div>
+            </details>
+        </li>
+
+        <li>
+            <details class="project" name="project">
+                <summary>
+                    <h3>GPS 迎賓系統 — VIP 客戶進店偵測與派工通知</h3>
+                </summary>
+
+                <div class="project-detail">
+                    <h4>作品介紹</h4>
+                    <p>角色：後端開發</p>
+                    <p>透過藍牙／GPS 訊號自動偵測 VIP 客戶進店，即時派工並通知服務人員前往接待。系統整合 MQTT 高頻定位、WebSocket 即時推播與 Telegram 機器人互動。專案因與已知現有技術重疊度過高而停止開發。</p>
+                    <h4>以後端開發身份負責：</h4>
+                    <ul>
+                        <li><span class="item-title">身分認證</span><span>管理後台登入與存取控制，採 JWT 驗證；WebSocket 連線改用一次性票券鑑權，避免憑證出現在網址與存取紀錄中</span></li>
+                        <li><span class="item-title">派工演算法</span><span>以專屬經營人員優先、忙碌時自動改派閒置人員的規則，決定通知對象</span></li>
+                        <li><span class="item-title">訊號處理</span><span>處理圍欄進出事件與定位訊號，以兩層去重機制擋掉網路重送與圍欄邊緣來回走動造成的重複通知</span></li>
+                    </ul>
+                    <p>技術：Python・FastAPI・PostgreSQL・MQTT・WebSocket・Telegram Bot</p>
+
+                    <h4>功能演示</h4>
+                    <div class="demo">
+                        <p>之後放入演示畫面</p>
+                    </div>
+                </div>
+            </details>
+        </li>
+
+        <li>
+            <details class="project" name="project">
+                <summary>
+                    <h3>FileGuard — 檔案完整性監控工具</h3>
+                </summary>
+
+                <div class="project-detail">
+                    <h4>作品介紹</h4>
+                    <p>角色：個人專案 / 獨立設計與開發</p>
+                    <p>偵測指定資料夾或檔案的未預期異動（新增・修改・刪除），設計初衷是在使用 AI 輔助開發工具時，掌握專案關鍵檔案（如 .env、設定檔）是否被意外更動。</p>
+                    <p>以 SHA256 雜湊比對判斷檔案內容是否真的改變（而非只看修改時間），並以 SQLite 儲存歷史事件與各檔案最新雜湊狀態，支援多個資料夾各自獨立的基準線。偵測到異動時，會透過系統桌面通知、提示音與 Discord Webhook 多管道提醒，任一管道失效都不影響監控本身。提供 Windows GUI（打包為正式安裝程式）與跨平台 CLI（Windows / Linux 驗證）兩種使用方式，共用同一套底層模組。</p>
+                    <h4>負責：</h4>
+                    <ul>
+                        <li><span class="item-title">核心監控邏輯</span><span>以定期掃描建立雜湊基準線，比對新舊狀態，判定新增 / 修改 / 刪除事件，支援排除資料夾與檔案樣式（避免編輯器暫存檔誤報）</span></li>
+                        <li><span class="item-title">資料庫設計</span><span>events 表保留完整歷史、files 表保存最新狀態；以 (folder, path) 組合主鍵讓不同監控目標互不干擾，解決切換資料夾時大量誤判刪除的問題</span></li>
+                        <li><span class="item-title">雙介面共用架構</span><span>將掃描、雜湊、資料庫抽成共用模組，GUI（customtkinter）與 CLI 僅負責呈現層</span></li>
+                        <li><span class="item-title">容錯與跨平台</span><span>於 WSL 無桌面環境測試時發現通知例外會中斷整個監控迴圈，改以 try/except 隔離各提醒管道；儲存路徑與提示音依作業系統切換</span></li>
+                        <li><span class="item-title">打包與發布</span><span>以 PyInstaller + Inno Setup 製作 Windows 安裝程式，並於另一台電腦實測，排除打包後圖示路徑遺失、plyer 動態模組未被打包等問題；GitHub Releases 發布，CLI 以 git clone 取得</span></li>
+                    </ul>
+                    <p>技術： Python・SQLite・SHA256（hashlib）・customtkinter・PyInstaller・Inno Setup・Discord Webhook</p>
+
+                    <h4>功能演示</h4>
+                    <div class="demo">
+                        <p>之後放入演示畫面</p>
+                    </div>
+                </div>
+            </details>
+        </li>
+
+        <li>
+            <details class="project" name="project">
+                <summary>
+                    <h3>SiteNap - 螢幕遮罩工具 (個人)</h3>
+                </summary>
+
+                <div class="project-detail">
+                    <h4>作品介紹</h4>
+                    <p>Chrome 擴充功能，可快速遮罩網頁內容，用於強制休息或專注防干擾情境。</p>
+
+                    <h4>功能演示</h4>
+                    <div class="demo">
+                        <p>之後放入演示畫面</p>
+                    </div>
+                </div>
+            </details>
+        </li>
+    </ul>
+
+    <h2>證照</h2>
+    <ul class="cert-list">
+        <li>
+            <h3>Fortinet Network Security</h3>
+            <p>Deploying Security Strategies for Modern Network（2026/07/03）</p>
+        </li>
+    </ul>
+</div>
+</div>
+<script src="履歷.js"></script>
+</body>
+</html>
+
+</html>
